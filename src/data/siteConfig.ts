@@ -65,7 +65,8 @@ export const siteConfig = {
   },
 
   /** サイトURL（canonical / OGP）。環境変数があればそちらを優先 */
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
+  siteUrl:
+    process.env.NEXT_PUBLIC_SITE_URL || "https://kaisei2004311-boop.github.io/proposal-service",
 
   /**
    * フォーム送信先
