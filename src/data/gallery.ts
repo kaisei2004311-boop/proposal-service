@@ -44,7 +44,7 @@ export const gallery: GalleryItem[] = [
     category: "PROPOSAL",
     title: "夜景とバルーンアーチ",
     location: "横浜・みなとみらい",
-    image: "",
+    image: "/proposal-service/images/gallery/proposal-balloon-night.webp",
     isConceptImage: true,
   },
   {
@@ -52,7 +52,7 @@ export const gallery: GalleryItem[] = [
     category: "PROPOSAL",
     title: "花束を添えたプロポーズ",
     location: "横浜",
-    image: "",
+    image: "/proposal-service/images/gallery/proposal-bouquet.webp",
     isConceptImage: true,
   },
   {
@@ -68,7 +68,7 @@ export const gallery: GalleryItem[] = [
     category: "BIRTHDAY",
     title: "数字バルーンの演出",
     location: "横浜",
-    image: "",
+    image: "/proposal-service/images/gallery/birthday-balloon.webp",
     isConceptImage: true,
   },
   {
@@ -84,7 +84,7 @@ export const gallery: GalleryItem[] = [
     category: "ANNIVERSARY",
     title: "ベッドサイドのフローラル",
     location: "横浜",
-    image: "",
+    image: "/proposal-service/images/gallery/anniversary-floral.webp",
     isConceptImage: true,
   },
   {
@@ -92,7 +92,7 @@ export const gallery: GalleryItem[] = [
     category: "PROPOSAL",
     title: "花びらの小径",
     location: "横浜・みなとみらい",
-    image: "",
+    image: "/proposal-service/images/gallery/proposal-petals.webp",
     isConceptImage: true,
   },
   {
@@ -100,7 +100,7 @@ export const gallery: GalleryItem[] = [
     category: "BIRTHDAY",
     title: "テーブルフラワー",
     location: "横浜",
-    image: "",
+    image: "/proposal-service/images/gallery/birthday-table.webp",
     isConceptImage: true,
   },
 ];
