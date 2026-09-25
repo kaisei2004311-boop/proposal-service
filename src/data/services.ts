@@ -23,7 +23,7 @@ export const services: Service[] = [
     ja: "プロポーズ",
     description:
       "ホテル装飾・花束・バルーンなどを組み合わせ、大切なプロポーズを演出します。会場の雰囲気に合わせ、ふたりらしい時間をつくります。",
-    image: "",
+    image: "/proposal-service/images/scene/proposal.webp",
   },
   {
     id: "birthday",
@@ -32,7 +32,7 @@ export const services: Service[] = [
     ja: "誕生日",
     description:
       "恋人や大切な人への誕生日サプライズを演出します。客室に戻った瞬間の「わあ」から、そのあとの時間まで含めてご提案します。",
-    image: "",
+    image: "/proposal-service/images/scene/birthday.webp",
   },
   {
     id: "anniversary",
@@ -41,6 +41,6 @@ export const services: Service[] = [
     ja: "記念日",
     description:
       "交際記念日・結婚記念日など、特別な日の空間を演出します。毎年の記念日を、静かに贅沢な一夜へ。",
-    image: "",
+    image: "/proposal-service/images/scene/anniversary.webp",
   },
 ];

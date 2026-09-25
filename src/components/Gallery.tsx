@@ -23,12 +23,13 @@ export function Gallery() {
           <p>施工事例が増え次第、写真を差し替えていきます。現在はイメージです。</p>
         </div>
 
-        <div className="filters" role="tablist" aria-label="ギャラリーのカテゴリ">
+        <div className="filters" role="group" aria-label="ギャラリーのカテゴリ">
           {galleryCategories.map((category) => (
             <button
               key={category.id}
               type="button"
               className={`filter-btn ${filter === category.id ? "is-active" : ""}`}
+              aria-pressed={filter === category.id}
               onClick={() => setFilter(category.id)}
             >
               {category.label}
@@ -44,7 +45,7 @@ export function Gallery() {
                 {item.isConceptImage ? <span className="badge">イメージ</span> : null}
                 {item.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={item.image} alt={`${item.title}（${item.location}）`} />
+                  <img src={item.image} alt={`${item.title}の演出イメージ（${item.location}）`} loading="lazy" />
                 ) : (
                   <PlaceholderVisual tone={tone} />
                 )}

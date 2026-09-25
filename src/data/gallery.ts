@@ -36,7 +36,7 @@ export const gallery: GalleryItem[] = [
     category: "PROPOSAL",
     title: "ローズとキャンドルの客室",
     location: "横浜・みなとみらい",
-    image: "",
+    image: "/proposal-service/images/scene/proposal.webp",
     isConceptImage: true,
   },
   {
@@ -60,7 +60,7 @@ export const gallery: GalleryItem[] = [
     category: "BIRTHDAY",
     title: "バースデーの客室装飾",
     location: "横浜・みなとみらい",
-    image: "",
+    image: "/proposal-service/images/scene/birthday.webp",
     isConceptImage: true,
   },
   {
@@ -76,7 +76,7 @@ export const gallery: GalleryItem[] = [
     category: "ANNIVERSARY",
     title: "記念日の静かなステイ",
     location: "横浜・みなとみらい",
-    image: "",
+    image: "/proposal-service/images/scene/anniversary.webp",
     isConceptImage: true,
   },
   {

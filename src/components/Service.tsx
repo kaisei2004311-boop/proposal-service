@@ -17,8 +17,11 @@ export function Service() {
               <article className="service-card">
                 <div className="service-visual">
                   {service.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={service.image} alt={`${service.ja}のイメージ`} />
+                    <>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={service.image} alt={`${service.ja}の演出イメージ`} loading="lazy" />
+                      <span className="image-note">演出イメージ</span>
+                    </>
                   ) : (
                     <PlaceholderVisual tone={service.id} caption={service.en} />
                   )}

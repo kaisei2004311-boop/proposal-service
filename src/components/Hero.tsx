@@ -4,7 +4,11 @@ import { LineLink } from "./Cta";
 export function Hero() {
   return (
     <section className="hero" id="top" aria-label="メインビジュアル">
-      <div className="hero-visual" aria-hidden />
+      <div className="hero-visual" aria-hidden="true">
+        {/* Generated concept image. Keep the scenery separate from actual project photos. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/proposal-service/images/scene/proposal.webp" alt="" fetchPriority="high" />
+      </div>
       <div className="hero-veil" aria-hidden />
       <div className="hero-content">
         <span className="hero-en">{siteConfig.englishLabel}</span>
@@ -31,6 +35,7 @@ export function Hero() {
       <div className="hero-scroll en" aria-hidden>
         SCROLL
       </div>
+      <span className="hero-image-note">写真は演出イメージです</span>
     </section>
   );
 }

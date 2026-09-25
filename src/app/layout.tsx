@@ -4,7 +4,6 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { StickyCta } from "@/components/StickyCta";
 import { siteConfig } from "@/data/siteConfig";
-import { cormorant, shippori, zenKaku } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -40,7 +39,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ja" className={`${cormorant.variable} ${shippori.variable} ${zenKaku.variable}`}>
+    <html lang="ja">
       <body>
         <Link className="skip-link" href="/#concept">
           本文へスキップ

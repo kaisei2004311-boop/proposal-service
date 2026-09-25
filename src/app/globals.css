@@ -3,6 +3,9 @@
    色・余白・文字サイズはここを中心に調整
 ======================================== */
 :root {
+  --font-serif-en: "Cormorant Garamond", Georgia, serif;
+  --font-serif-jp: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --font-sans: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
   --ivory: #f6f1eb;
   --ivory-deep: #efe7de;
   --paper: #fbf8f4;
@@ -51,12 +54,16 @@ body {
   font-family: var(--font-sans), "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   color: var(--charcoal);
   background: var(--ivory);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.95;
   letter-spacing: 0.04em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   padding-bottom: calc(var(--sticky-h) + env(safe-area-inset-bottom));
+}
+
+section[id] {
+  scroll-margin-top: var(--header-h);
 }
 
 img {
@@ -164,7 +171,8 @@ button {
   margin: 0 auto;
   max-width: 34em;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.85;
 }
 
 .section--night .section-head p {
@@ -180,7 +188,7 @@ button {
   padding: 0 26px;
   border: 1px solid transparent;
   letter-spacing: 0.12em;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   transition: background 0.35s var(--ease), color 0.35s var(--ease), border-color 0.35s var(--ease), transform 0.35s var(--ease);
   text-align: center;
@@ -433,15 +441,17 @@ button {
 .hero-visual {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 70% 45% at 78% 78%, rgba(184, 150, 94, 0.22), transparent 55%),
-    radial-gradient(ellipse 50% 35% at 18% 72%, rgba(196, 162, 156, 0.18), transparent 50%),
-    radial-gradient(circle 8px at 62% 58%, rgba(255, 236, 210, 0.55), transparent 18px),
-    radial-gradient(circle 4px at 48% 54%, rgba(255, 250, 235, 0.45), transparent 12px),
-    radial-gradient(circle 3px at 71% 52%, rgba(255, 220, 180, 0.4), transparent 10px),
-    linear-gradient(180deg, #0c1118 0%, #141c28 38%, #1c1824 68%, #2a1d22 100%);
+  background: var(--night);
   transform: scale(1.06);
   animation: kenburns 22s ease-in-out alternate infinite;
+}
+
+.hero-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% center;
 }
 
 .hero-visual::after {
@@ -456,7 +466,7 @@ button {
 .hero-veil {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 14, 20, 0.28) 0%, rgba(10, 14, 20, 0.18) 40%, rgba(10, 14, 20, 0.55) 100%);
+  background: linear-gradient(180deg, rgba(10, 14, 20, 0.48) 0%, rgba(10, 14, 20, 0.48) 42%, rgba(10, 14, 20, 0.77) 100%);
 }
 
 .hero-content {
@@ -488,10 +498,20 @@ button {
 .hero-sub {
   margin: 0 auto 36px;
   white-space: pre-line;
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 2.1;
   color: rgba(246, 241, 235, 0.84);
   max-width: 28em;
+}
+
+.hero-image-note {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.86);
+  letter-spacing: 0.06em;
 }
 
 .hero-actions {
@@ -592,7 +612,19 @@ button {
 .service-meta p {
   margin: 0;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 14.5px;
+  line-height: 1.8;
+}
+
+.image-note {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 5px 9px;
+  background: rgba(27, 25, 23, 0.75);
+  color: white;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 /* Placeholder visuals */
@@ -645,7 +677,7 @@ button {
   position: absolute;
   top: 12px;
   right: 12px;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.16em;
   padding: 4px 8px;
   background: rgba(255, 252, 248, 0.88);
@@ -701,7 +733,7 @@ button {
 .plan-card p {
   margin: 0 0 16px;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 14.5px;
 }
 
 .plan-card ul {
@@ -711,7 +743,7 @@ button {
 }
 
 .plan-card li {
-  font-size: 13px;
+  font-size: 14px;
   padding: 6px 0 6px 16px;
   position: relative;
 }
@@ -777,11 +809,11 @@ button {
 }
 
 .filter-btn {
-  min-height: 40px;
+  min-height: 44px;
   padding: 0 16px;
   border: 1px solid var(--line-strong);
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.12em;
   background: transparent;
 }
@@ -823,13 +855,13 @@ button {
 .gallery-cap {
   position: absolute;
   inset: auto 0 0;
-  padding: 28px 12px 12px;
+  padding: 45px 14px 14px;
   background: linear-gradient(transparent, rgba(16, 21, 29, 0.72));
   color: var(--ivory);
 }
 
 .gallery-cap .en {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   display: block;
   margin-bottom: 2px;
@@ -837,13 +869,13 @@ button {
 
 .gallery-cap strong {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.06em;
   display: block;
 }
 
 .gallery-cap span {
-  font-size: 10px;
+  font-size: 12px;
   opacity: 0.8;
 }
 
@@ -890,7 +922,7 @@ button {
 .step p {
   margin: 0;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 14.5px;
 }
 
 /* Options */
@@ -923,7 +955,7 @@ button {
 .option-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14.5px;
 }
 
 .soon {
@@ -983,7 +1015,7 @@ button {
   margin: 0;
   padding: 0 18px 20px;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 14.5px;
 }
 
 /* Instagram */
@@ -1242,6 +1274,19 @@ button {
     gap: 18px 28px;
     margin: 0;
   }
+}
+
+@media (max-width: 767px) {
+  .hero-visual img { object-position: 66% center; }
+  .hero-veil { background: linear-gradient(180deg, rgba(10, 14, 20, 0.48), rgba(10, 14, 20, 0.67) 58%, rgba(10, 14, 20, 0.8)); }
+  .hero-image-note { right: 14px; bottom: 12px; font-size: 11px; }
+  .hero-scroll { bottom: 12px; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gallery-item { aspect-ratio: 3 / 4; }
+  .gallery-cap { padding: 32px 10px 10px; }
+  .gallery-cap .en { font-size: 10px; }
+  .gallery-cap strong { font-size: 13px; line-height: 1.45; }
+  .gallery-cap span { font-size: 11px; }
 }
 
 @media (min-width: 1100px) {
