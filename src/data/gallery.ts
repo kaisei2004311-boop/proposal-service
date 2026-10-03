@@ -30,6 +30,20 @@ export const galleryCategories: { id: GalleryCategory | "ALL"; label: string }[]
   { id: "ANNIVERSARY", label: "記念日" },
 ];
 
+/** 実際の施工事例。価格はこの事例の目安。 */
+export const featuredCase = {
+  title: "花とバルーンで彩る客室プロポーズ",
+  image: "/proposal-service/images/gallery/actual-proposal-room.webp",
+  decorations: [
+    "フラワーアレンジメント",
+    "チュール",
+    "花びら",
+    "LEDキャンドル",
+    "バルーン",
+  ],
+  price: "約80,000円",
+} as const;
+
 export const gallery: GalleryItem[] = [
   {
     id: "proposal-rose-suite",
